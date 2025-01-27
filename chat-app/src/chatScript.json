@@ -1,0 +1,27 @@
+[
+    {
+      "user": "Alex",
+      "text": "Hey, everyone!",
+      "color": "#1E90FF",
+      "delay": 0
+    },
+    {
+      "user": "Taylor",
+      "text": "Hey, Alex! How's it going?",
+      "color": "#FF1493",
+      "delay": 1000
+    },
+    {
+      "user": "Jordan",
+      "text": "What's up, folks?",
+      "color": "#32CD32",
+      "delay": 2000
+    },
+    {
+      "user": "Alex",
+      "text": "Not much, just wanted to check in.",
+      "color": "#1E90FF",
+      "delay": 3000
+    }
+  ]
+  
