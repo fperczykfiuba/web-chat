@@ -49,23 +49,26 @@ function App() {
       inputRef.current.focus();
     }
   }, [messages]); // Refocus every time a message is sent
-
   return (
     <div className="chat-container">
+      <header className="chat-header">
+        <h1>https://shifting.archx.org/a1Fh42/112</h1>
+      </header>
       <div className="chat-window">
-              {messages.map((msg, index) => (
-        <div
-          key={index}
-          className={`message-row ${
-            msg.user === "YOU" ? "message-sent" : "message-received"
-          }`}
-        >
-          <div className="message-user" style={{ color: msg.color }}>
-            <strong>{`< ${msg.user} >`}</strong>
+        {messages.map((msg, index) => (
+          <div
+            key={index}
+            className={`message-row ${
+              msg.user === "YOU" ? "message-sent" : "message-received"
+            }`}
+          >
+            <div className="message-user" style={{ color: msg.color }}>
+              <strong>{`< ${msg.user} >`}</strong>
+            </div>
+            <div className="message-text">{msg.text}</div>
           </div>
-          <div className="message-text">{msg.text}</div>
-        </div>
-      ))}
+        ))}
+        <div ref={messagesEndRef} />
         {/* Move input field right behind the latest message */}
         <form className="message-form-inline" onSubmit={sendMessage}>
           <input
@@ -77,7 +80,6 @@ function App() {
             autoComplete="off"
           />
         </form>
-        <div ref={messagesEndRef} />
       </div>
     </div>
   );
